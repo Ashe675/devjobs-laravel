@@ -75,9 +75,9 @@ RUN composer install
 RUN php artisan storage:link 
 
 # Caché de configuración
-RUN php artisan view:cache \
-    && php artisan event:cache \
-    && php artisan optimize
+# RUN php artisan view:cache \
+#     && php artisan event:cache \
+#     && php artisan optimize
 
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
