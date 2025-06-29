@@ -4,9 +4,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>DevJobs - @yield('title')</title>
+    <link rel="icon" href="{{ asset('images/logo.ico') }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Meta Description -->
+    <meta name="description"
+        content="@yield('meta_description', 'Find remote tech jobs or post developer vacancies on DevJobs — the platform connecting developers and recruiters globally.')">
+
+    <!-- Keywords (SEO) -->
+    <meta name="keywords"
+        content="developer jobs, remote tech jobs, job board for developers, DevJobs, tech recruiters, coding jobs, developer career, apply for developer jobs, hire developers">
+
+    <!-- Author -->
+    <meta name="author" content="DevJobs Team">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="@yield('og_title', 'DevJobs - Developer Jobs Platform')">
+    <meta property="og:description"
+        content="@yield('meta_description', 'Find remote tech jobs or post developer vacancies on DevJobs — the platform connecting developers and recruiters globally.')">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og_title', 'DevJobs - Developer Jobs Platform')">
+    <meta name="twitter:description"
+        content="@yield('meta_description', 'Find remote tech jobs or post developer vacancies on DevJobs — the platform connecting developers and recruiters globally.')">
+    <meta name="twitter:image" content="{{ asset('images/logo.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
